@@ -1,9 +1,12 @@
 function pattern(num) {
 	for (var i = num; i > 0; i--) {
+		var a = '';
 		for (var j = 0; j < i; j++) {
-			document.write("*");
+			a += "*";
+			document.write("*");			
 		}
-		document.write("<br>")
+		console.log(a);
+		document.write("<br>");
 	}
 }
 pattern(5);
