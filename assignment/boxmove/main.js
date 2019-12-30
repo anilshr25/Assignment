@@ -1,17 +1,17 @@
 var outsideBox = {
 
-	boxId: document.getElementById('boxarea'),
+	boxId: document.createElement('div'),
 	init:function () {
 		this.boxId.style.width ="500px";
 		this.boxId.style.height ="500px";
 		this.boxId.style.position = "absolute";
 		this.boxId.style.border = "2px solid";
-		document.body.childNodes[0];
+		document.body.appendChild(this.boxId);
 		}
 	};
 var insideBox = {
 
-	boxId: document.getElementById('box'),
+	boxId: document.createElement('div'),
 	init:function () {
 		this.boxId.style.left ="15px";
 		this.boxId.style.top ="15px";
@@ -20,12 +20,26 @@ var insideBox = {
 		this.boxId.style.height ="15px";
 		this.boxId.style.position = "absolute";
 		this.boxId.style.border = "2px solid red";
-		document.body.childNodes[1];
+		document.body.appendChild(this.boxId);
 		}
-	};
+};
+
+var showInfo = {
+
+	boxId: document.createElement('div'),
+	init:function () {
+		this.boxId.style.top = "55px";
+		this.boxId.style.left = "525px";
+		this.boxId.style.textAlign = "bold";
+		this.boxId.innerHTML = "Use this key or arrow to move box.<br> MoveUp: W/&#x2191;<br> MoveDown: S/&#x2193;<br> MoveLeft: A/&#x2190; <br> MoveRight: D/&#x2192;";
+		this.boxId.style.position = "absolute";
+		document.body.appendChild(this.boxId);
+	}
+};
 function show() {
 	outsideBox.init();
 	insideBox.init();
+	showInfo.init();
 }
 show();
 //var outwidth = parseInt(outsideBox.boxId.style.width) - parseInt(insideBox.boxId.style.top);
