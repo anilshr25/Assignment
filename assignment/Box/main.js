@@ -22,7 +22,7 @@ function Main() {
 			objArr[i].x += 10;
 			objArr[i].draw();
 		}
-	},10);
+	},1000);
 }
 var newbox = new Main();
 newbox.intBox();
