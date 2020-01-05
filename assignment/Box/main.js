@@ -27,4 +27,3 @@ function Main() {
 var newbox = new Main();
 newbox.intBox();
 newbox.drawBox();
-//newbox.move();

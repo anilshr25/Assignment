@@ -2,7 +2,7 @@ function Main() {
 	var objArr = [];
 	var that = this;
 	this.intBox = function () {
-		var noofbox = 5;
+		var noofbox = 3;
 		var color = ["red", "blue"];		
 		for (var i = 0; i < noofbox; i++) {
 			var newX = Math.floor(Math.random() * (200 - 100));
@@ -22,7 +22,7 @@ function Main() {
 				if(i!=j){
 					if (objArr[i].x < (objArr[j].x + objArr[j].width) &&
 						(objArr[i].x + objArr[i].width) > objArr[j].x && 
-						objArr[i].y < (objArr[j].y + objArr[j].y) &&
+						objArr[i].y < (objArr[j].y + objArr[j].height) &&
 						(objArr[i].y + objArr[i].height) > objArr[j].y) {
 							objArr[i].color = "green";
 							objArr[j].color = "green";

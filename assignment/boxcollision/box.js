@@ -24,7 +24,7 @@ function Box(x,y,width,height,color,directionX,directionY) {
 		this.checkborderCollision();
 	}
 	this.checkborderCollision = function () {
-		if (this.x > 1000 || this.x <= 0) {
+		if (this.x > 500 || this.x <= 0) {
 
 			this.dx *= -1;
 
